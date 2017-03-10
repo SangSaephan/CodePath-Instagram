@@ -29,7 +29,8 @@ class HomeViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 print("User logged out successfully")
-                self.dismiss(animated: true, completion: nil)
+                let vc = self.storyboard?.instantiateInitialViewController() as! LoginViewController
+                self.present(vc, animated: true, completion: nil)
             }
         }
     }
