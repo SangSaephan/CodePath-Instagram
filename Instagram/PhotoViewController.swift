@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  PhotoViewController.swift
 //  Instagram
 //
 //  Created by Sang Saephan on 3/9/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class PhotoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

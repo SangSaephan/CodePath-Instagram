@@ -57,7 +57,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="a36-P8-15c" id="r8J-ek-pxR"/>
                         <outlet property="usernameTextField" destination="WLc-Pc-i4I" id="3RZ-8D-2n5"/>
-                        <segue destination="6Tl-gG-e6P" kind="presentation" identifier="loginSegue" id="grG-zq-PBg"/>
+                        <segue destination="g8V-Wm-3kp" kind="presentation" identifier="loginSegue" id="bXe-Go-wSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
         <!--Instgram-->
         <scene sceneID="PVS-xM-EXd">
             <objects>
-                <viewController id="Awr-Yb-yj6" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Awr-Yb-yj6" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vHE-hN-CMY"/>
                         <viewControllerLayoutGuide type="bottom" id="Fn9-0v-qIm"/>
@@ -87,12 +87,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsa-zg-MkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1607" y="140"/>
+            <point key="canvasLocation" x="2722" y="139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="hw2-j7-hJL">
             <objects>
                 <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="6Tl-gG-e6P" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile-Icon" id="r61-3z-lvn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j9T-ov-MMU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -105,7 +106,107 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BaB-JB-HaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="856.79999999999995" y="140.77961019490255"/>
+            <point key="canvasLocation" x="1975" y="139"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="nd2-Cw-8Pz">
+            <objects>
+                <viewController id="Q6Q-ip-3fu" customClass="PhotoViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pac-0T-ftc"/>
+                        <viewControllerLayoutGuide type="bottom" id="bjZ-6t-IYb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hcT-Ia-j5e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UPv-AM-kTr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fw7-6z-ABT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2721" y="903"/>
+        </scene>
+        <!--Instagram-->
+        <scene sceneID="uwk-Cd-Vdp">
+            <objects>
+                <viewController id="UZj-iE-pdq" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpb-0V-cgS"/>
+                        <viewControllerLayoutGuide type="bottom" id="1qx-DT-OTH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cbh-dr-QKS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Instagram" id="dax-AG-nCy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iR2-uQ-E2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="903"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="6x1-6q-rtY">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="g8V-Wm-3kp" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="oy6-xN-QQi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dDS-KE-qtO" kind="relationship" relationship="viewControllers" id="uUb-h7-jjI"/>
+                        <segue destination="O0h-kf-yJX" kind="relationship" relationship="viewControllers" id="lW2-6r-llG"/>
+                        <segue destination="6Tl-gG-e6P" kind="relationship" relationship="viewControllers" id="1FS-tU-DGk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRn-a6-0Fo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="139"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="nYb-e7-N1e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dDS-KE-qtO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="home-icon" id="vXu-Ls-2Zc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dK7-48-WXW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UZj-iE-pdq" kind="relationship" relationship="rootViewController" id="r74-Q0-ZX5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HY8-s5-dg4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="903"/>
+        </scene>
+        <!--Capture-->
+        <scene sceneID="DOH-pO-zO6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O0h-kf-yJX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Capture" image="camera-icon" id="tlk-EB-SEy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qtx-5d-gHX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Q6Q-ip-3fu" kind="relationship" relationship="rootViewController" id="zmW-x8-8Sv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJl-Rd-5cl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="903"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera-icon" width="30" height="23"/>
+        <image name="home-icon" width="30" height="30"/>
+        <image name="profile-Icon" width="26" height="26"/>
+    </resources>
 </document>

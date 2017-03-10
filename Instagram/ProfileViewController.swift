@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Parse
 
-class HomeViewController: UIViewController {
+class ProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,19 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func signOutPressed(_ sender: UIBarButtonItem) {
+        PFUser.logOutInBackground { (error: Error?) in
+            if let error = error {
+                print("User logout failed.")
+                print(error.localizedDescription)
+            } else {
+                print("User logged out successfully")
+                let vc = self.storyboard?.instantiateInitialViewController() as! LoginViewController
+                self.present(vc, animated: true, completion: nil)
+            }
+        }
     }
     
 
