@@ -13,6 +13,7 @@
 		4EA736AA1E6F82A500DA71E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EA736A91E6F82A500DA71E0 /* Assets.xcassets */; };
 		4EA736AD1E6F82A500DA71E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA736AB1E6F82A500DA71E0 /* LaunchScreen.storyboard */; };
 		4EA736B51E6F89D500DA71E0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA736B41E6F89D500DA71E0 /* LoginViewController.swift */; };
+		4EA736B71E7236FA00DA71E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA736B61E7236FA00DA71E0 /* HomeViewController.swift */; };
 		56ED32EED65AF68AC11E492E /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F894630107F9F0D7DFFCF53 /* Pods_Instagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		4EA736AC1E6F82A500DA71E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EA736AE1E6F82A500DA71E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EA736B41E6F89D500DA71E0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4EA736B61E7236FA00DA71E0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5F894630107F9F0D7DFFCF53 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				4EA736AB1E6F82A500DA71E0 /* LaunchScreen.storyboard */,
 				4EA736AE1E6F82A500DA71E0 /* Info.plist */,
 				4EA736B41E6F89D500DA71E0 /* LoginViewController.swift */,
+				4EA736B61E7236FA00DA71E0 /* HomeViewController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				4EA736B51E6F89D500DA71E0 /* LoginViewController.swift in Sources */,
 				4EA736A51E6F82A500DA71E0 /* ViewController.swift in Sources */,
 				4EA736A31E6F82A500DA71E0 /* AppDelegate.swift in Sources */,
+				4EA736B71E7236FA00DA71E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,6 +31,8 @@ class LoginViewController: UIViewController {
             if user != nil {
                 print("Login successful!")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.usernameTextField.text = ""
+                self.passwordTextField.text = ""
             }
         }
     }
@@ -45,6 +47,8 @@ class LoginViewController: UIViewController {
             if success {
                 print("User created!")
                 self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                self.usernameTextField.text = ""
+                self.passwordTextField.text = ""
             } else {
                 print(error!.localizedDescription)
             }

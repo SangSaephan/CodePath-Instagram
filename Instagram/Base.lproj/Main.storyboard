@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLc-Pc-i4I">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLc-Pc-i4I">
                                 <rect key="frame" x="59" y="113" width="258" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a36-P8-15c">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a36-P8-15c">
                                 <rect key="frame" x="58" y="178" width="258" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -57,17 +57,17 @@
                     <connections>
                         <outlet property="passwordTextField" destination="a36-P8-15c" id="r8J-ek-pxR"/>
                         <outlet property="usernameTextField" destination="WLc-Pc-i4I" id="3RZ-8D-2n5"/>
-                        <segue destination="Awr-Yb-yj6" kind="presentation" identifier="loginSegue" id="grG-zq-PBg"/>
+                        <segue destination="6Tl-gG-e6P" kind="presentation" identifier="loginSegue" id="grG-zq-PBg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Instgram-->
         <scene sceneID="PVS-xM-EXd">
             <objects>
-                <viewController id="Awr-Yb-yj6" sceneMemberID="viewController">
+                <viewController id="Awr-Yb-yj6" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vHE-hN-CMY"/>
                         <viewControllerLayoutGuide type="bottom" id="Fn9-0v-qIm"/>
@@ -77,10 +77,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Instgram" id="Ohb-qQ-Q76">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="cOL-xf-abB">
+                            <connections>
+                                <action selector="signOutPressed:" destination="Awr-Yb-yj6" id="e8x-WI-mj2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsa-zg-MkM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="141"/>
+            <point key="canvasLocation" x="1607" y="140"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hw2-j7-hJL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Tl-gG-e6P" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="j9T-ov-MMU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Awr-Yb-yj6" kind="relationship" relationship="rootViewController" id="dtp-oO-zBJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaB-JB-HaD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="140.77961019490255"/>
         </scene>
     </scenes>
 </document>
