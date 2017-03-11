@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZLoadingActivity
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -18,7 +19,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -43,10 +43,21 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
 
     @IBAction func submitButtonPressed(_ sender: Any) {
         
-        Post.postUserImage(image: postImage, withCaption: captionTextField.text, withCompletion: nil)
-        tabBarController?.selectedIndex = 0
-        posterImageView.image = nil
-        captionTextField.text = ""
+        EZLoadingActivity.show("Uploading...", disableUI: true)
+        self.view.alpha = 0.2
+        
+        Post.postUserImage(image: postImage, withCaption: captionTextField.text) { (success: Bool, error: Error?) in
+            if success {
+                EZLoadingActivity.hide(true, animated: true)
+                self.tabBarController?.selectedIndex = 0
+                self.posterImageView.image = nil
+                self.captionTextField.text = ""
+                self.view.alpha = 1
+            } else {
+                EZLoadingActivity.hide(false, animated: true)
+                self.view.alpha = 1
+            }
+        }
         
     }
     

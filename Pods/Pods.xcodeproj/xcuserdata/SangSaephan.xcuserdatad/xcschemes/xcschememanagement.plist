@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>EZLoadingActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,7 +32,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A48E27471D4EB992609C289DD110F8CF</key>
+		<key>94F2CE7C53E0B316213820927AD62E15</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B68B30BAA59D3C581E36B229F5026576</key>
 		<dict>
 			<key>primary</key>
 			<true/>

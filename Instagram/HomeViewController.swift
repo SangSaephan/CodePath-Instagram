@@ -67,7 +67,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             
         }
-        self.tableView.reloadData()
+        
     }
 
 }
