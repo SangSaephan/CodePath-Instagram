@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var posts: [PFObject]!
+    let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl.addTarget(self, action: #selector(HomeViewController.refreshControlAction), for: UIControlEvents.valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         
         networkCall()
         
@@ -61,6 +65,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let posts = posts {
                 self.posts = posts
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
             } else {
                 print("error")
             }
@@ -68,6 +73,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
+    }
+    
+    // Pull to refresh action
+    func refreshControlAction() {
+        networkCall()
     }
 
 }
